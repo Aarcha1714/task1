@@ -93,10 +93,6 @@ body {
     transition: background-color 0.3s;
 }
 
-/* Button hover effect */
-.book-btn:hover {
-    background-color: #2F584E;
-}
 .para {
     font-size: 12px;
 }
@@ -365,21 +361,31 @@ body {
     .menu {
         position: relative;
     }
+    body, .footer {
+        padding: 20px 20px 20px 30px;
+    }
 
-    /* Hide the menu list */
+    /* Menu list styles */
     .menu-list {
         display: none;
         flex-direction: column;
         gap: 15px;
         position: absolute;
-        top: 50px;
+        top: 50px; 
         left: 0;
         background-color: #fff;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 5; 
+        z-index: 1000; 
     }
 
+    /* Show the menu list */
+    .menu.active .menu-list {
+        display: flex;
+    }
+    .students-info {
+        margin-right: 32px;
+    }
     /* Show the hamburger icon */
     .hamburger {
         display: block;
@@ -388,6 +394,90 @@ body {
     .menu.active .menu-list {
         display: flex;
     }
-}
 
+    .book-btn {
+        padding: 10px 20px;
+        font-size: 0.875rem;
+        max-width: 165px;
+        width: 100%;
+    }
+    .button-text {
+        font-size: 0.85rem;
+    }
 
+    .hello-world {
+        font-size: 1rem; 
+    }
+
+    .para {
+        font-size: 0.65rem; 
+        width: 60%;
+    }
+    .title {
+        font-size: 1.25rem; 
+        margin-right: 1px;
+    }
+    .logo-container1 {
+        width: 26px;
+        height: 57px;
+    }
+    .button-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 10px; 
+    }
+
+    .journey {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; 
+        width: 100%; 
+    }
+
+    .journey-image {
+        width: 26px;
+        height: auto;
+        margin-right: 10px;
+        margin-left: 0px;
+    }
+
+    .journey-text {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #333;
+    }
+    .inner-images {
+        display: flex;        
+        flex-direction: column; 
+        gap: 10px;           
+        width: 100%;          
+        height: auto;         
+        padding: 10px;        
+    }
+
+    .inner-image {
+        width: 100%;         
+        height: auto;        
+        object-fit: cover;  
+    }
+
+    .footer-item {
+        justify-content: flex-start; 
+        align-items: center;
+        margin-bottom: 10px; 
+        padding: 10px;
+    }
+
+    .footer-number, .footer-number1, .footer-number2 {
+        margin-right: 5px;
+        font-size: 16px;
+    }
+
+    .footer-text {
+        display: block;
+        font-size: 0.675rem;
+        text-align: left; 
+        margin-top: 5px;
+    }
+} 
