@@ -66,13 +66,6 @@ body {
     flex-grow: 1; 
 }
 
-/* Title styles */
-.title {
-    font-size: 36px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 10px;
-}
 
 /* Button container */
 .button-container {
@@ -289,3 +282,45 @@ body {
 .student-images img:nth-child(3) {
     z-index: 3;
 }
+/*title and logo */
+.title-container {
+    display: flex;  
+    align-items: center;
+}
+
+/* Title styles */
+.title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Logo container */
+.logo-container1 {
+    position: relative; 
+    width: 30px; 
+    height: 30px; 
+    top: 18px;
+}
+
+/* Styling for the first logo*/
+.logo-one {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: auto;
+}
+
+/* Styling for the second logo */
+.logo-two {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: auto;
+    z-index: 1; 
+    padding: 6px;
+}
+
