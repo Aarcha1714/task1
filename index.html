@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn</title>
     
-    <!-- Link to Google Fonts for Nunito -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Top section with Hello World title and menu -->
     <div class="top-section">
         <img src="images/Logo.png" alt="Logo" class="logo">
         <h1 class="hello-world">Hello World!</h1>
         <div class="menu">
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
             <ul class="menu-list">
                 <li><a href="#">Course</a></li>
                 <li><a href="#">Info</a></li>
@@ -70,21 +69,26 @@
             </div>
         </div>
 
-        <!-- Footer Section -->
         <footer class="footer">
             <div class="footer-item">
                 <span class="footer-number">6409</span>
                 <span class="footer-text">Success Story</span>
             </div>
             <div class="footer-item">
-                <span class="footer-number">124</span>
+                <span class="footer-number1">124</span>
                 <span class="footer-text">Expert Instructor</span>
             </div>
             <div class="footer-item">
-                <span class="footer-number">54.749</span>
+                <span class="footer-number2">54.749</span>
                 <span class="footer-text">Hours Tutored</span>
             </div>
         </footer>
     </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

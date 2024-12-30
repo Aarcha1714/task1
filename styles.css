@@ -30,7 +30,7 @@ body {
     align-items: center;
     justify-content: flex-start;  
     width: 100%;  
-    margin-bottom: 30px;  
+    margin-bottom: 40px;  
 }
 
 .hello-world {
@@ -38,11 +38,13 @@ body {
     font-weight: 600;
     color: #333;
     margin-right: 40px; 
+    margin-top: 12px;
 }
 
 .menu {
     display: flex;
     align-items: center;
+    margin-top: 12px;
 }
 
 .menu-list {
@@ -84,7 +86,7 @@ body {
     color: #fff;
     font-size: 18px;
     font-weight: bold;
-    padding: 15px 30px;
+    padding: 15px 40px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -111,8 +113,6 @@ body {
     background-color: #FF9257;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
-    gap: 20px;
-    text-align: center;
     position: fixed; 
     bottom: 0; 
     left: 0; 
@@ -135,7 +135,7 @@ body {
     right: 0; 
     top: 50%; 
     transform: translateY(-50%); 
-    width: 4px; 
+    width: 2px; 
     height: 90%; 
     background-color: #F7BE2C; 
 }
@@ -146,7 +146,7 @@ body {
     left: 0; 
     top: 50%; 
     transform: translateY(-50%); 
-    width: 4px; 
+    width: 2px; 
     height: 90%; 
     background-color: #F7BE2C; 
 }
@@ -154,6 +154,17 @@ body {
 .footer-number {
     font-size: 24px;
     font-weight: bold;
+    margin-right: 30px;
+}
+.footer-number1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 64px;
+}
+.footer-number2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 15px;
 }
 
 .footer-text {
@@ -210,7 +221,7 @@ body {
 .journey {
     display: flex; 
     align-items: center; 
-    margin-left: 20px; 
+    margin-left: 4px; 
     cursor: pointer; 
 }
 
@@ -294,6 +305,7 @@ body {
     font-weight: 600;
     color: #333;
     margin-bottom: 10px;
+    margin-right: 12px;
 }
 
 /* Logo container */
@@ -323,4 +335,59 @@ body {
     z-index: 1; 
     padding: 6px;
 }
+/* Base styles for the menu */
+.menu-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-list li {
+    font-size: 18px;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* hamburger icon for small screens */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #333;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .menu {
+        position: relative;
+    }
+
+    /* Hide the menu list */
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 5; 
+    }
+
+    /* Show the hamburger icon */
+    .hamburger {
+        display: block;
+    }
+
+    .menu.active .menu-list {
+        display: flex;
+    }
+}
+
 
